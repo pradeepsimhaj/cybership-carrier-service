@@ -1,5 +1,11 @@
 import { RateRequest } from "../../domain/RateRequest";
 
+type UPSRateRequestPayload = {
+  RateRequest: {
+    Shipment: unknown;
+  };
+};
+
 export function mapRateRequestToUPS(request: RateRequest): any {
   return {
     RateRequest: {
@@ -17,7 +23,7 @@ export function mapRateRequestToUPS(request: RateRequest): any {
           }
         },
         Package: request.packages.map(pkg => ({
-          PackagingType: { Code: "02" }, // Customer Supplied Package
+          PackagingType: { Code: "02" },
           Dimensions: {
             UnitOfMeasurement: { Code: "CM" },
             Length: pkg.lengthCm.toString(),
