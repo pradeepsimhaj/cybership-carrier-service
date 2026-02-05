@@ -25,3 +25,7 @@ Thumbs.db
 
 # Jest
 coverage/
+
+# dev tests
+
+_dev_tests.ts
