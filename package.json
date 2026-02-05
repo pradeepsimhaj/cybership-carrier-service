@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "node api.js && tsc",
     "test": "jest",
-    "dev": "ts-node src/index.ts"
+    "dev": "node api.js && ts-node src/index.ts"
   },
   "keywords": [],
   "author": "",

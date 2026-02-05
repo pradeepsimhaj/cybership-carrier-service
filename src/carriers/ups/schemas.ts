@@ -1,16 +1,15 @@
 import { z } from "zod";
 
-/**
- * UPS OAuth token response
- */
+
+//   UPS OAuth token response
+ 
 export const UPSTokenSchema = z.object({
   access_token: z.string(),
   expires_in: z.number()
 });
 
-/**
- * UPS Rate API response (simplified but realistic)
- */
+//  UPS Rate API response
+ 
 export const UPSRateResponseSchema = z.object({
   RateResponse: z.object({
     RatedShipment: z.array(
